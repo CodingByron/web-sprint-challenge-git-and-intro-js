@@ -218,8 +218,6 @@ console.log(artists[2].bio);
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 (not auto tested): 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 (no function needed) 
 There is a typo in your dataset 😱 The 9th artist, Vincent Van Gogh is currently Vincent Van Dough. Fix this issue and console.log() to check your work. */
-//objIndex = artists.findIndex((obj => obj.id == 8));
-//artists[objIndex].name = "Vincent Van Gogh";
 artists[8].name = "Vincent Van Gogh"
 console.log(artists);
 
@@ -247,7 +245,7 @@ Use listOfNames to do the following:
 🌟 EXAMPLE of return: ["Amedeo Modigliani", "Vasiliy Kandinskiy", "Diego Rivera"....]
 */
 
-function listOfNames(/*Your Code Here*/) {
+function listOfNames(array) {
   /*Your Code Here*/
 }
 
@@ -262,9 +260,13 @@ Use removeArtist to do the following:
 5. Return the resulting copied array
 🌟 EXAMPLE: if removeArtist is invoked with the artists array and the number 0, it will return the resulting array with Amedeo Modigliani removed from our dataset. */
 
-function removeArtist(/*Your Code Here*/) {
-  /*Your Code Here*/
+function removeArtist(array, index) {
+  const artistsCopy = array;
+  const indexForRemoval = index;
+  artistsCopy.splice(indexForRemoval,1);
+  return artistsCopy;
 }
+console.log(removeArtist(artists, 0))
 
 
 
@@ -284,10 +286,12 @@ Use addArtist to do the following:
 5. Add the newly created object to the copied array, then return the copied array
 🌟 EXAMPLE: Invoking addArtist(artists, 'John Doe', '1988-2022', 'Full Stack Development', 'African American', 'I have a background in customer service at Big Retail Chain. I am attending BloomTech to become a Frontend Developer.') should return the artists array with the above object added to the end of the array. */
 
-function addArtist(/*Your Code Here*/) {
-  /*Your Code Here*/
+function addArtist(array, name, years, genre, nationality, bio) {
+  const artistsCopy = array
+  artistsCopy.push({name, years, genre, nationality, bio});
+  return artistsCopy;
 }
-
+console.log(addArtist(artists, "John Doe", '1988-2022', "Full Stack Development", "African American", "I have a background in customer service at Big Retail Chain. I am attending BloomTech to become a Frontend Developer."))
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
