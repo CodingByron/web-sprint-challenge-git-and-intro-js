@@ -246,9 +246,10 @@ Use listOfNames to do the following:
 */
 
 function listOfNames(array) {
-  /*Your Code Here*/
+  let copiedArtists = array.map(a => a.name);
+  return copiedArtists;
 }
-
+console.log(listOfNames(artists));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
