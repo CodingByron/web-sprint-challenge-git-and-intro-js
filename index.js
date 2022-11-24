@@ -304,8 +304,13 @@ Use lotsOfArt to do the following:
 */
 
 function lotsOfArt(array) {
-  /*Your Code Here*/
-}
+  const busyArtists =  array.filter(function(artist) {
+    return artist.paintings > 100;
+  });
+    let artistNames = busyArtists.map(a => a.name);
+    return artistNames;
+  }
+  console.log(lotsOfArt(artists));
 
 
 
