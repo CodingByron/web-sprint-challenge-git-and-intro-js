@@ -326,8 +326,8 @@ function artistInfo(array, artist){
       filteredArray.push(array[i]);
     } 
   }
-  const newArray = filteredArray.map(a => a.bio);
-  return `${newArray}`;
+  const bioResult = filteredArray.map(a => a.bio);
+  return `${bioResult}`;
 }
 console.log(artistInfo(artists, "Frida Kahlo"));
 
@@ -343,9 +343,16 @@ Use artistByCountry to do the following:
 */
 
 function artistByCountry(array, nationality){
-  /*Your Code Here*/
+  const filteredArray = [];
+  for(let i = 0; i < array.length; i++){
+    if (array[i].nationality === nationality) {
+      filteredArray.push(array[i]);
+    } 
+  }
+  const artistResult = filteredArray.map(a => a.name);
+  return artistResult;
 }
-
+console.log(artistByCountry(artists, "Spanish"));
 
 
 /* ***** END OF TASKS ***** */
